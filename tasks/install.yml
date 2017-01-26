@@ -35,6 +35,12 @@
   when: mysql_installed is defined and not mysql_installed.stat.exists
   no_log: True
 
+- name: MySQL | Make sure the MySQL conflicting packages are uninstalled
+  apt:
+    name: "{{item}}"
+    state: absent
+  with_items: "{{ mysql_uninstall_packages }}"
+
 - name: MySQL | Make sure the MySQL packages are installed
   apt:
     name: "{{item}}"
