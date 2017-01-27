@@ -1,0 +1,9 @@
+---
+
+- name: avoid problems when changing the innodb file size
+  mysql_variables:
+    variable: "{{ item.variable }}"
+    value: "{{ item.value }}"
+  with_items:
+    - variable: "innodb_fast_shutdown"
+      value: "0"
