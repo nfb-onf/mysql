@@ -98,6 +98,10 @@ This is the ansible way, and will easily allow command line arguments like `--ta
 
 See [vagrant docs](https://docs.vagrantup.com/v2/) for getting setup with vagrant
 
+Troubleshooting
+===============
+
+https://askubuntu.com/questions/86939/error-while-installing-mysql-server-5-1
 
 #### License
 

@@ -48,7 +48,10 @@ mysql_users: []
 # List of apt packages to install
 # You can change in trusty to mysql-server-5.6 and mysql-client-5.6
 # You will need to ensure that 5.5 is uninstalled with mysql_uninstall_packages var
+# https://askubuntu.com/questions/86939/error-while-installing-mysql-server-5-1
 mysql_packages:
+  - mysql-common
+  - mysql-server-5.5
   - mysql-server
   - mysql-client
   - python-mysqldb
