@@ -47,7 +47,7 @@
    - "{{ansible_hostname}}"
    - 127.0.0.1
    - ::1
-  when: "root_pw_already_set|failed and ansible_hostname != 'localhost'"
+  when: "root_pw_already_set is failed and ansible_hostname != 'localhost'"
   tags:
     - change_root_password
 
@@ -84,7 +84,7 @@
    - 127.0.0.1
    - ::1
    - localhost
-  when: "root_pw_already_set|failed and ansible_hostname == 'localhost'"
+  when: "root_pw_already_set is failed and ansible_hostname == 'localhost'"
   tags:
     - change_root_password
 
